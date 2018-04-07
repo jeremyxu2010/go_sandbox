@@ -1,14 +1,14 @@
 package: personal/jeremyxu/sandbox
 import:
 - package: github.com/hashicorp/consul
-  version: 1.0.6
+  version: v1.0.6
   subpackages:
   - api
 - package: github.com/micro/examples
   subpackages:
   - greeter/srv/proto/hello
 - package: github.com/micro/go-micro
-  version: 0.6.0
+  version: v0.6.0
   subpackages:
   - registry
   - registry/consul
@@ -24,3 +24,7 @@ import:
   - encoding/simplifiedchinese
   - transform
 - package: github.com/adonovan/gopl.io
+- package: github.com/go-kit/kit
+  version: v0.7.0
+  subpackages:
+  - examples
