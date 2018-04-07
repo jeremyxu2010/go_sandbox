@@ -1,5 +1,5 @@
-hash: 916bfa018e878194c1f7b984f3a0d48a77b4f41e4c1bdaccad14ce1ffd70a688
-updated: 2018-04-07T20:54:21.984449+08:00
+hash: b2e3a11c3167dd5f448fdda5393dbb05ee082cd9957da059a8a4aaa98ac16b59
+updated: 2018-04-07T21:04:34.500384+08:00
 imports:
 - name: github.com/adonovan/gopl.io
   version: b725d6015f980e94734da37e35ba0d943fc7532f
