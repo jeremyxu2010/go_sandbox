@@ -1,0 +1,26 @@
+package: personal/jeremyxu/sandbox
+import:
+- package: github.com/hashicorp/consul
+  version: 1.0.6
+  subpackages:
+  - api
+- package: github.com/micro/examples
+  subpackages:
+  - greeter/srv/proto/hello
+- package: github.com/micro/go-micro
+  version: 0.6.0
+  subpackages:
+  - registry
+  - registry/consul
+- package: golang.org/x/crypto
+  subpackages:
+  - blowfish
+  - ssh
+- package: golang.org/x/net
+  subpackages:
+  - websocket
+- package: golang.org/x/text
+  subpackages:
+  - encoding/simplifiedchinese
+  - transform
+- package: github.com/adonovan/gopl.io
