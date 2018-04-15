@@ -1,10 +1,12 @@
-hash: b2e3a11c3167dd5f448fdda5393dbb05ee082cd9957da059a8a4aaa98ac16b59
-updated: 2018-04-07T21:04:34.500384+08:00
+hash: bc20ce71ade9a36ab8ab6db2556635a30d67e1d5bdc305f6a2883eb28bc76500
+updated: 2018-04-15T21:50:05.052704+08:00
 imports:
 - name: github.com/adonovan/gopl.io
   version: b725d6015f980e94734da37e35ba0d943fc7532f
 - name: github.com/armon/go-metrics
   version: 783273d703149aaeb9897cf58613d5af48861c25
+- name: github.com/avast/retry-go
+  version: 5469272a8171235352a56af37e5f7facf814423f
 - name: github.com/go-kit/kit
   version: ca4112baa34cb55091301bdc13b1420a122b1b9e
   subpackages:
@@ -17,6 +19,10 @@ imports:
   version: 925541529c1fa6821df4e44ce2723319eb2be768
   subpackages:
   - proto
+- name: github.com/gorilla/context
+  version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
+- name: github.com/gorilla/mux
+  version: 53c1911da2b537f792e7cafcb446b05ffe33b996
 - name: github.com/hashicorp/consul
   version: 9a494b5fb9c86180a5702e29c485df1507a47198
   subpackages:
@@ -91,6 +97,8 @@ imports:
   version: c65b2f87fee37d1c7854c9164a450713c28d50cd
 - name: github.com/pkg/errors
   version: 816c9085562cd7ee03e7f8188a1cfd942858cded
+- name: github.com/satori/go.uuid
+  version: f58768cc1a7a7e77a3bd49e98cdd21419399b6a3
 - name: golang.org/x/crypto
   version: b2aa35443fbc700ab74c586ae79b81c171851023
   subpackages:
@@ -112,7 +120,7 @@ imports:
   - ipv6
   - websocket
 - name: golang.org/x/text
-  version: 2cb43934f0eece38629746959acc633cba083fe4
+  version: 7922cc490dd5a7dbaa7fd5d6196b49db59ac042f
   subpackages:
   - encoding
   - encoding/internal

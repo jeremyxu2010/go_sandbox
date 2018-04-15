@@ -22,8 +22,6 @@ func main() {
 	resp, err = http.DefaultClient.Do(req)
 
 	resp, err = (&http.Client{}).Do(req)
-
-	http.FileServer()
 }
 func checkErr(err error) {
 	if err != nil {
