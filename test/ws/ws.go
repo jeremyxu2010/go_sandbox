@@ -2,16 +2,15 @@ package main
 
 import (
 	"golang.org/x/net/websocket"
-	"io"
 	"net/http"
 	"os"
 	"fmt"
+	"io"
 )
 
 func echoServer(ws *websocket.Conn) {
-	websocket.Message.Receive()
 	defer ws.Close()
-	io.Copy(ws, ws)
+	io.Copy(os.Stdout, ws)
 }
 func main() {
 	http.Handle("/", websocket.Handler(echoServer))
