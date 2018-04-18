@@ -1,5 +1,5 @@
-hash: bc20ce71ade9a36ab8ab6db2556635a30d67e1d5bdc305f6a2883eb28bc76500
-updated: 2018-04-15T21:50:05.052704+08:00
+hash: 48075510b43835d498e326271577d5dfce250d3ee40a88960b7b57cf29adf750
+updated: 2018-04-18T22:36:16.874767+08:00
 imports:
 - name: github.com/adonovan/gopl.io
   version: b725d6015f980e94734da37e35ba0d943fc7532f
@@ -7,6 +7,8 @@ imports:
   version: 783273d703149aaeb9897cf58613d5af48861c25
 - name: github.com/avast/retry-go
   version: 5469272a8171235352a56af37e5f7facf814423f
+- name: github.com/cxr29/log
+  version: f2b7006a51a1af7ac69c6870c7fed3c86ab47b30
 - name: github.com/go-kit/kit
   version: ca4112baa34cb55091301bdc13b1420a122b1b9e
   subpackages:
@@ -21,6 +23,8 @@ imports:
   - proto
 - name: github.com/gorilla/context
   version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
+- name: github.com/gorilla/handlers
+  version: 2b8556b16671de6e753c3eccf2aa763f3c55848a
 - name: github.com/gorilla/mux
   version: 53c1911da2b537f792e7cafcb446b05ffe33b996
 - name: github.com/hashicorp/consul
