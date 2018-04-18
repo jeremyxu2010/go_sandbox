@@ -1,5 +1,5 @@
-hash: 48075510b43835d498e326271577d5dfce250d3ee40a88960b7b57cf29adf750
-updated: 2018-04-18T22:36:16.874767+08:00
+hash: 5f829feec2a04f61dfa37d7785eb69e611e025ad92d75c7ea3e9191f35ad5497
+updated: 2018-04-18T23:13:33.084404+08:00
 imports:
 - name: github.com/adonovan/gopl.io
   version: b725d6015f980e94734da37e35ba0d943fc7532f
@@ -46,6 +46,8 @@ imports:
   version: 3b250ce4404edb266330f53fcfc8ad0d0dacfae7
   subpackages:
   - coordinate
+- name: github.com/jeremyxu2010/log
+  version: 651bbe9a2810c2dded4e93612ae464c88b034b05
 - name: github.com/micro/cli
   version: 3d2263bb092286dde294a31049c92665f8373820
 - name: github.com/micro/examples

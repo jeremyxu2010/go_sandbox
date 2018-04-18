@@ -34,4 +34,4 @@ import:
   version: v1.2.0
 - package: github.com/gorilla/mux
   version: v1.6.1
-- package: github.com/cxr29/log
+- package: github.com/jeremyxu2010/log
