@@ -4,6 +4,7 @@ import (
 	consulapi "github.com/hashicorp/consul/api"
 	"fmt"
 	"github.com/satori/go.uuid"
+	"time"
 )
 
 var (
@@ -19,17 +20,16 @@ func main() {
 	}
 
 	srvUUID := uuid.NewV3(SrvNS, "192.168.1.201:9527")
+	srvID := fmt.Sprintf("demoSrv_%s", srvUUID.String())
+	srvName := "demoSrv"
 	registration := consulapi.AgentServiceRegistration{
-		ID:      fmt.Sprintf("demoSrv_%s", srvUUID.String()),
-		Name:    "demoSrv",
+		ID:      srvID,
+		Name:    srvName,
 		Address: "127.0.0.1",
 		Port:    9527,
 		Tags:    []string{"proj1", "cluster1", "dev"},
 		Check: &consulapi.AgentServiceCheck{
-			//Args:                           []string{"sh", "-c", "sleep 1 && exit 0"},
-			HTTP:                           "http://192.168.1.201:9527/check",
-			Timeout:                        "3s",
-			Interval:                       "5s",
+			TTL: "10s",
 			DeregisterCriticalServiceAfter: "1m", //check失败后30秒删除本服务
 		},
 	}
@@ -41,11 +41,23 @@ func main() {
 		panic(err)
 	}
 
-	services, err := agent.Services()
-	if err != nil {
-		panic(err)
-	}
-	for srvId := range services {
-		fmt.Printf("name: %s, agent: %v", srvId, services[srvId])
-	}
+	exit := make(chan bool)
+
+	go func() {
+		for {
+			agent.PassTTL("service:" + srvID, srvName)
+			time.Sleep(time.Second * 9)
+		}
+		exit <- true
+	}()
+
+	<- exit
+
+	//services, err := agent.Services()
+	//if err != nil {
+	//	panic(err)
+	//}
+	//for srvId := range services {
+	//	fmt.Printf("name: %s, agent: %v", srvId, services[srvId])
+	//}
 }

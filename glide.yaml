@@ -35,3 +35,7 @@ import:
 - package: github.com/gorilla/mux
   version: v1.6.1
 - package: github.com/jeremyxu2010/log
+- package: github.com/go-logfmt/logfmt
+  version: ~0.3.0
+- package: github.com/fatih/structs
+  version: ~1.0.0

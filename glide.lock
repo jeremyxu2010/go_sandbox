@@ -1,5 +1,5 @@
-hash: 5f829feec2a04f61dfa37d7785eb69e611e025ad92d75c7ea3e9191f35ad5497
-updated: 2018-04-18T23:13:33.084404+08:00
+hash: 29ceac1248fbab5861c76a7f7febd4014a905223af2d3a0217950decf652a508
+updated: 2018-04-22T01:51:51.348642+08:00
 imports:
 - name: github.com/adonovan/gopl.io
   version: b725d6015f980e94734da37e35ba0d943fc7532f
@@ -7,16 +7,27 @@ imports:
   version: 783273d703149aaeb9897cf58613d5af48861c25
 - name: github.com/avast/retry-go
   version: 5469272a8171235352a56af37e5f7facf814423f
-- name: github.com/cxr29/log
-  version: f2b7006a51a1af7ac69c6870c7fed3c86ab47b30
+- name: github.com/fatih/structs
+  version: a720dfa8df582c51dee1b36feabb906bde1588bd
 - name: github.com/go-kit/kit
   version: ca4112baa34cb55091301bdc13b1420a122b1b9e
   subpackages:
+  - endpoint
   - examples
+  - log
+  - sd
+  - sd/consul
+  - sd/internal/instance
+  - sd/lb
+  - transport/http
 - name: github.com/go-log/log
   version: 37e2e1f19306361e1fc152a1839f1236149cb4e4
   subpackages:
   - log
+- name: github.com/go-logfmt/logfmt
+  version: 390ab7935ee28ec6b286364bba9b4dd6410cb3d5
+- name: github.com/go-stack/stack
+  version: 259ab82a6cad3992b4e21ff5cac294ccb06474bc
 - name: github.com/golang/protobuf
   version: 925541529c1fa6821df4e44ce2723319eb2be768
   subpackages:
@@ -48,6 +59,8 @@ imports:
   - coordinate
 - name: github.com/jeremyxu2010/log
   version: 651bbe9a2810c2dded4e93612ae464c88b034b05
+- name: github.com/kr/logfmt
+  version: b84e30acd515aadc4b783ad4ff83aff3299bdfe0
 - name: github.com/micro/cli
   version: 3d2263bb092286dde294a31049c92665f8373820
 - name: github.com/micro/examples
