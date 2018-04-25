@@ -1,5 +1,5 @@
-hash: 29ceac1248fbab5861c76a7f7febd4014a905223af2d3a0217950decf652a508
-updated: 2018-04-22T01:51:51.348642+08:00
+hash: b9ce7569501bef5347a1c8ac6e3ccfed38178b5d8a868658dcbe951dadf23271
+updated: 2018-04-25T23:49:52.424814+08:00
 imports:
 - name: github.com/adonovan/gopl.io
   version: b725d6015f980e94734da37e35ba0d943fc7532f
@@ -70,7 +70,7 @@ imports:
 - name: github.com/micro/go-log
   version: cbfa9447f9b655f8e66583237e51f40ca9bff860
 - name: github.com/micro/go-micro
-  version: 75be57d6e4d895d228d516472668b7009c643d79
+  version: 8fb5e20a224d73d24a73c54f961cdba32b9da2ff
   subpackages:
   - broker
   - broker/codec
@@ -94,16 +94,21 @@ imports:
   - transport
   - transport/codec
   - transport/http
+- name: github.com/micro/go-plugins
+  version: 9b10555db387d20915d32fcb13023e29a7df05e4
+  subpackages:
+  - client/http
+  - server/http
 - name: github.com/micro/go-rcache
   version: c4d553f1c37857cdc6d5385e83b6946deed488e4
 - name: github.com/micro/mdns
   version: cdf30746f9f70dc7a366d3d885792a092fd83102
-- name: github.com/micro/misc
-  version: b252244c714ddeb20723862cc15a5b6d2225b125
+- name: github.com/micro/util
+  version: 4b7ed83e8520ab8fe6e5ef61fa2ede94b32f8602
   subpackages:
-  - lib/addr
-  - lib/net
-  - lib/tls
+  - go/lib/addr
+  - go/lib/net
+  - go/lib/tls
 - name: github.com/miekg/dns
   version: 83c435cc65d2862736428b9b4d07d0ab10ad3e4d
 - name: github.com/mitchellh/go-homedir

@@ -4,14 +4,17 @@ import (
 	"context"
 	"fmt"
 
-	hello "github.com/micro/examples/greeter/srv/proto/hello"
+	"personal/jeremyxu/sandbox/test/go-micro/proto/greeter"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/selector"
+	"github.com/micro/go-micro/registry/consul"
+	"github.com/micro/go-micro/registry"
 )
 
 func main() {
 	// create a new service
 	service := micro.NewService(
+		micro.Registry(consul.NewRegistry(registry.Addrs("127.0.0.1:8500"))),
 		micro.Selector(selector.NewSelector(selector.Option(selector.SetStrategy(selector.RoundRobin)))),
 	)
 
@@ -19,10 +22,10 @@ func main() {
 	service.Init()
 
 	// Use the generated client stub
-	cl := hello.NewSayClient("go.micro.srv.greeter", service.Client())
+	cl := greeter.NewGreeterService("sandbox.test.go-micro.greeter", service.Client())
 
 	// Make request
-	rsp, err := cl.Hello(context.Background(), &hello.Request{
+	rsp, err := cl.Hello(context.Background(), &greeter.Request{
 		Name: "John",
 	})
 	if err != nil {

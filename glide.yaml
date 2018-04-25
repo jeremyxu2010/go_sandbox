@@ -8,7 +8,7 @@ import:
   subpackages:
   - greeter/srv/proto/hello
 - package: github.com/micro/go-micro
-  version: v0.6.0
+  version: v0.8.0
   subpackages:
   - registry
   - registry/consul
@@ -39,3 +39,6 @@ import:
   version: ~0.3.0
 - package: github.com/fatih/structs
   version: ~1.0.0
+- package: github.com/micro/go-plugins
+  version: ~0.10.0
+- package: github.com/micro/util
