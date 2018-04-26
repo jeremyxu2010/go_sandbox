@@ -1,5 +1,5 @@
-hash: b9ce7569501bef5347a1c8ac6e3ccfed38178b5d8a868658dcbe951dadf23271
-updated: 2018-04-25T23:49:52.424814+08:00
+hash: 4b17fc2e17b13f7da14205a439ca953ac1697d8d3a002b07da19754fa0f56576
+updated: 2018-04-26T18:23:45.754067527+08:00
 imports:
 - name: github.com/adonovan/gopl.io
   version: b725d6015f980e94734da37e35ba0d943fc7532f
@@ -9,6 +9,13 @@ imports:
   version: 5469272a8171235352a56af37e5f7facf814423f
 - name: github.com/fatih/structs
   version: a720dfa8df582c51dee1b36feabb906bde1588bd
+- name: github.com/gin-contrib/sse
+  version: 22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae
+- name: github.com/gin-gonic/gin
+  version: d459835d2b077e44f7c9b453505ee29881d5d12d
+  subpackages:
+  - binding
+  - render
 - name: github.com/go-kit/kit
   version: ca4112baa34cb55091301bdc13b1420a122b1b9e
   subpackages:
@@ -29,7 +36,7 @@ imports:
 - name: github.com/go-stack/stack
   version: 259ab82a6cad3992b4e21ff5cac294ccb06474bc
 - name: github.com/golang/protobuf
-  version: 925541529c1fa6821df4e44ce2723319eb2be768
+  version: bbd03ef6da3a115852eaf24c8a1c46aeb39aa175
   subpackages:
   - proto
 - name: github.com/gorilla/context
@@ -54,17 +61,21 @@ imports:
   subpackages:
   - simplelru
 - name: github.com/hashicorp/serf
-  version: 3b250ce4404edb266330f53fcfc8ad0d0dacfae7
+  version: fc4bdedf2366c64984e280c6eefc703ca7812585
   subpackages:
   - coordinate
 - name: github.com/jeremyxu2010/log
   version: 651bbe9a2810c2dded4e93612ae464c88b034b05
+- name: github.com/jtolds/gls
+  version: 77f18212c9c7edc9bd6a33d383a7b545ce62f064
 - name: github.com/kr/logfmt
   version: b84e30acd515aadc4b783ad4ff83aff3299bdfe0
+- name: github.com/mattn/go-isatty
+  version: 6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c
 - name: github.com/micro/cli
   version: 3d2263bb092286dde294a31049c92665f8373820
 - name: github.com/micro/examples
-  version: 201522e747076ed1f062978ff5ce58f30e5e7fd1
+  version: 1891367d7b53e165732e7b6754f223c440f54449
   subpackages:
   - greeter/srv/proto/hello
 - name: github.com/micro/go-log
@@ -100,7 +111,7 @@ imports:
   - client/http
   - server/http
 - name: github.com/micro/go-rcache
-  version: c4d553f1c37857cdc6d5385e83b6946deed488e4
+  version: a581a57b513351792b9f21fc8b95d87b1c5a95da
 - name: github.com/micro/mdns
   version: cdf30746f9f70dc7a366d3d885792a092fd83102
 - name: github.com/micro/util
@@ -110,7 +121,7 @@ imports:
   - go/lib/net
   - go/lib/tls
 - name: github.com/miekg/dns
-  version: 83c435cc65d2862736428b9b4d07d0ab10ad3e4d
+  version: 01d59357d468872339068bcd5d55a00e2463051f
 - name: github.com/mitchellh/go-homedir
   version: b8bc1bf767474819792c23f32d8286a45736f1c6
 - name: github.com/mitchellh/hashstructure
@@ -118,13 +129,17 @@ imports:
 - name: github.com/mitchellh/mapstructure
   version: 00c29f56e2386353d58c599509e8dc3801b0d716
 - name: github.com/pborman/uuid
-  version: c65b2f87fee37d1c7854c9164a450713c28d50cd
+  version: e790cca94e6cc75c7064b1332e63811d4aae1a53
 - name: github.com/pkg/errors
-  version: 816c9085562cd7ee03e7f8188a1cfd942858cded
+  version: 645ef00459ed84a119197bfb8d8205042c6df63d
 - name: github.com/satori/go.uuid
   version: f58768cc1a7a7e77a3bd49e98cdd21419399b6a3
+- name: github.com/ugorji/go
+  version: 02537d3a3e32ef636a53519265d211bd208ca488
+  subpackages:
+  - codec
 - name: golang.org/x/crypto
-  version: b2aa35443fbc700ab74c586ae79b81c171851023
+  version: b4956d363a8b14623cc81db401707679605930a3
   subpackages:
   - blowfish
   - curve25519
@@ -134,7 +149,7 @@ imports:
   - poly1305
   - ssh
 - name: golang.org/x/net
-  version: b3c676e531a6dc479fa1b35ac961c13f5e2b4d2e
+  version: 5f9ae10d9af5b1c89ae6904293b14b064d4ada23
   subpackages:
   - bpf
   - context
@@ -143,6 +158,10 @@ imports:
   - ipv4
   - ipv6
   - websocket
+- name: golang.org/x/sys
+  version: cc7307a45468e49eaf2997c890f14aa03a26917b
+  subpackages:
+  - unix
 - name: golang.org/x/text
   version: 7922cc490dd5a7dbaa7fd5d6196b49db59ac042f
   subpackages:
@@ -151,4 +170,8 @@ imports:
   - encoding/internal/identifier
   - encoding/simplifiedchinese
   - transform
+- name: gopkg.in/go-playground/validator.v8
+  version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
+- name: gopkg.in/yaml.v2
+  version: 7f97868eec74b32b0982dd158a51a446d1da7eb5
 testImports: []
