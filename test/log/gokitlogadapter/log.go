@@ -18,7 +18,7 @@ var (
 
 func main() {
 	initSimpleLog()
-	logger := getGoKitLogger()
+	logger := NewGoKitLoggerAdapter()
 	logger = log.With(logger, "ts", log.TimestampFormat(time.Now, "2006-01-02 15:04:05.000"), "caller", log.DefaultCaller)
 	logger.Log("msg", "xxxx");
 }
@@ -67,6 +67,6 @@ func (a *GoKitLogAdapter) Log(keyvals ...interface{}) error {
 	return nil
 }
 
-func getGoKitLogger()log.Logger{
+func NewGoKitLoggerAdapter()log.Logger{
 	return &GoKitLogAdapter{simpleLogger: simpleLogger}
 }

@@ -15,7 +15,7 @@ var (
 
 func main() {
 	initSimpleLog()
-	logger := GetGoLogLogger()
+	logger := NewGoLogLoggerAdapter()
 
 	log.SetLogger(logger)
 	log.Log("xxxx")
@@ -38,6 +38,6 @@ func (a *GoLogAdapter) Logf(format string, v ...interface{}) {
 	a.logger.Errorf(format, v...)
 }
 
-func GetGoLogLogger() golog.Logger{
+func NewGoLogLoggerAdapter() golog.Logger{
 	return &GoLogAdapter{logger: simpleLogger}
 }
