@@ -42,3 +42,8 @@ import:
 - package: github.com/micro/go-plugins
   version: ~0.10.0
 - package: github.com/micro/util
+- package: github.com/jtolds/gls
+  version: ~4.2.1
+- package: github.com/gin-gonic/gin
+  version: ~1.2.0
+- package: github.com/gin-contrib/sse
