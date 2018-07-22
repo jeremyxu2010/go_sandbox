@@ -23,7 +23,7 @@ func main() {
 
 func initSimpleLog(){
 	simplelog.AddBracket()
-	simpleLogger = simplelog.New(os.Stdout, "[test] ", stdlog.LstdFlags | stdlog.Lshortfile, simplelog.LevelNotice)
+	simpleLogger = simplelog.New(os.Stdout, "[test] ", stdlog.LstdFlags | stdlog.Lshortfile, simplelog.LevelInfo)
 }
 
 type GoLogAdapter struct {
@@ -31,11 +31,11 @@ type GoLogAdapter struct {
 }
 
 func (a *GoLogAdapter) Log(v ...interface{}) {
-	a.logger.Error(v...)
+	a.logger.Info(v...)
 }
 
 func (a *GoLogAdapter) Logf(format string, v ...interface{}) {
-	a.logger.Errorf(format, v...)
+	a.logger.Infof(format, v...)
 }
 
 func NewGoLogLoggerAdapter() golog.Logger{

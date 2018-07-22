@@ -52,13 +52,13 @@ func (s *FilelockScrambler) Scramble() {
 			break
 		default:
 			err := s.FileLocker.Lock()
-			if err != nil {
-				s.Locked = false
-			} else {
+			if err == nil {
 				s.Locked = true
+				goto END
 			}
 			time.Sleep(time.Second * 5)
 		}
 
 	}
+	END:
 }

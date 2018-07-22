@@ -25,7 +25,7 @@ func main() {
 
 func initSimpleLog(){
 	simplelog.AddBracket()
-	simpleLogger = simplelog.New(os.Stdout, "[test] ", stdlog.LstdFlags | stdlog.Lshortfile, simplelog.LevelNotice)
+	simpleLogger = simplelog.New(os.Stdout, "[test] ", stdlog.LstdFlags | stdlog.Lshortfile, simplelog.LevelInfo)
 }
 
 type GoKitLogAdapter struct {
@@ -63,7 +63,7 @@ func (a *GoKitLogAdapter) Log(keyvals ...interface{}) error {
 	if err := enc.EndRecord(); err != nil {
 		return err
 	}
-	simpleLogger.Error(enc.buf.String())
+	simpleLogger.Info(enc.buf.String())
 	return nil
 }
 
